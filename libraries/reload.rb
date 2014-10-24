@@ -9,9 +9,9 @@ class Chef::Recipe
       user node['current_user']
     end
 	
-	apps.each do |app|
-		reload_ui_for(app)
-	end
+  	apps.each do |app|
+  		reload_ui_for(app)
+  	end
 
   end
 
