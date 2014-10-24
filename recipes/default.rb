@@ -49,7 +49,7 @@ end
 
 # You can hide directories of you want
 unless node['system']['hide_directories'].nil?
-	system_hide_directories do 
+	system_hide_directories "hide" do 
 		directories node['system']['hide_directories']
 	end
 end
