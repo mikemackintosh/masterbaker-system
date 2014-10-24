@@ -46,7 +46,7 @@ mac_os_x_userdefaults "Don't save documents to icloud by default" do
 end
 
 unless node['system']['hide_directories'].nil?
-	hide_directories node['system']['hide_directories'] do 
+	system_hide_directories node['system']['hide_directories'] do 
 		action :hide
 	end
 end
