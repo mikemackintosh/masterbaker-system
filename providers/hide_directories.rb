@@ -12,11 +12,12 @@ end
 
 def toggle_flag(dir, flag)
   unless dir.nil?
-    if dir.include?('~/')
-      dir.gsub('~/', node['system']['home'])
-    end    
+    
+    #if dir.include?('~/')
+    #  dir.gsub('~/', node['system']['home'])
+    #end   
 
-    if dir.include?(' ')
+    if dir.include? ' '
       dir.gsub(' ', '\\ ')
     end
     
