@@ -17,7 +17,7 @@ def toggle_flag(dir, flag)
     end
     
     execute "Unhiding directory: #{dir}" do
-      command "chflags #{flag} '#{dir}'"
+      command "chflags #{flag} #{dir}"
       user node['system']['current_user']
     end
   end
