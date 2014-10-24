@@ -17,7 +17,7 @@ def toggle_flag(dir, flag)
       dir = dir.gsub(' ', '\ ')
     end
     
-    if File.directory?(dir)
+    if ::File.exists? ::File.expand_path('~/exists')
       execute "Unhiding directory: #{dir}" do
         command "chflags #{flag} #{dir}"
         user node['system']['current_user']
