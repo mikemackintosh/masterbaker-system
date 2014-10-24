@@ -29,6 +29,7 @@ mac_os_x_userdefaults "Make resizing happen faster" do
   value "0.001"
 end
 
+# Close the printer app when printing is finished
 mac_os_x_userdefaults "Close the printer app when printing is finished" do
   domain 'com.apple.print.PrintingPrefs'
   global true
@@ -37,6 +38,7 @@ mac_os_x_userdefaults "Close the printer app when printing is finished" do
   value true
 end
 
+# Don't save items to icloud by default
 mac_os_x_userdefaults "Don't save documents to icloud by default" do
   domain 'NSGlobalDomain'
   global true
@@ -45,6 +47,7 @@ mac_os_x_userdefaults "Don't save documents to icloud by default" do
   value false
 end
 
+# You can hide directories of you want
 unless node['system']['hide_directories'].nil?
 	system_hide_directories node['system']['hide_directories'] do 
 		action :hide
