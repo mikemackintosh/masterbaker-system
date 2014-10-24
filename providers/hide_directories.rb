@@ -13,7 +13,7 @@ end
 def toggle_flag(dir, flag)
   unless dir.nil?
     if dir.include?('~/')
-      throw dir.gsub('~/', node['system']['home'])
+      dir.gsub('~/', node['system']['home'])
     end
     
     execute "Unhiding directory: #{dir}" do
