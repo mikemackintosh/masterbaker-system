@@ -18,7 +18,7 @@ def toggle_flag(dir, flag)
     #end   
 
     if dir.include? ' '
-      dir.gsub(' ', '\\ ')
+      dir = dir.gsub(' ', '\\ ')
     end
     
     execute "Unhiding directory: #{dir}" do
