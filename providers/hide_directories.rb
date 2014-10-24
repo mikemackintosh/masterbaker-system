@@ -2,7 +2,7 @@ action :hide do
   new_resource.directories.each do |dir| 
     
     if dir.include?('~/')
-      dir.gsub('~/', node['system']['home'])
+      throw dir.gsub('~/', node['system']['home'])
     end
 
     execute "Hiding directory: #{dir}" do
@@ -16,7 +16,7 @@ action :show do
   new_resource.directories.each do |dir| 
     
     if dir.include?('~/')
-      dir.gsub('~/', node['system']['home'])
+      throw dir.gsub('~/', node['system']['home'])
     end
     
     execute "Unhiding directory: #{dir}" do
