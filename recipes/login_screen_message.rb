@@ -3,6 +3,7 @@
     domain "/Library/Preferences/com.apple.loginwindow"
     global true
     key "LoginWindowText"
+    type "string"
     value node['system']['login_window_message']
   end
 #end
