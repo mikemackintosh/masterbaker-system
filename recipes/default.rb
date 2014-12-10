@@ -4,12 +4,12 @@ include_recipe "system::timemachine"
 include_recipe "system::system_save_dialogs"
 include_recipe "system::toggle_lightdark_mode"
 
-mac_os_x_userdefaults "Disable swipe between pages" do
-  domain 'NSGlobalDomain'
-  global true
-  key "AppleEnableSwipeNavigateWithScrolls"
-  value 0
-end
+#mac_os_x_userdefaults "Disable swipe between pages" do
+#  domain 'NSGlobalDomain'
+#  global true
+#  key "AppleEnableSwipeNavigateWithScrolls"
+#  value 0
+#end
 
 mac_os_x_userdefaults "Don't create .DS_store on network volumes" do
   domain 'com.apple.desktopservices'
