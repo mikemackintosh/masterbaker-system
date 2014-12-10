@@ -10,7 +10,7 @@ mac_os_x_userdefaults "Disable swipe between pages" do
   key "AppleEnableSwipeNavigateWithScrolls"
   type "bool"
   value "false"
- #end
+end
 
 mac_os_x_userdefaults "Don't create .DS_store on network volumes" do
   domain 'com.apple.desktopservices'
